@@ -1,0 +1,16 @@
+env: default
+
+server:
+    port: 8080
+
+spring:
+    application:
+        name: pirsp_prtal
+    profiles:
+        active:
+         - gdev # 激活gdev
+
+async:
+    core-pool-size: 2
+    max-pool-size: 50
+    queue-capacity: 10000
