@@ -99,7 +99,7 @@
             <artifactId>springfox-bean-validators</artifactId>
             <version>${springfox.version}</version>
         </dependency>
-        <!--  数据源-->
+        <!-- Druid 数据库连接池-->
         <dependency>
             <groupId>com.alibaba</groupId>
             <artifactId>druid</artifactId>
@@ -110,13 +110,14 @@
             <artifactId>druid-spring-boot-starter</artifactId>
             <version>${druid-spring-boot.version}</version>
         </dependency>
-        <!-- ./ 数据源-->
+        <!-- ./ Druid 数据库连接池-->
         <!-- jasypt 密码加密组件 -->
         <dependency>
             <groupId>com.github.ulisesbocchio</groupId>
             <artifactId>jasypt-spring-boot-starter</artifactId>
             <version>${jasypt.version}</version>
         </dependency>
+        <!-- ./ jasypt 密码加密组件 -->
         <!-- Junit Test -->
         <dependency>
             <groupId>junit</groupId>
@@ -136,11 +137,12 @@
             <groupId>org.springframework.data</groupId>
             <artifactId>spring-data-commons</artifactId>
         </dependency>
-        <!--开启 cache 缓存-->
+        <!-- Spring Cache -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-cache</artifactId>
         </dependency>
+        <!-- ./ Spring Cache -->
     </dependencies>
 
     <build>
