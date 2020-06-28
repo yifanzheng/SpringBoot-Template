@@ -9,7 +9,7 @@ import java.util.Map;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-public class StrUtil {
+public final class StrUtil {
 
     private final static long KB_IN_BYTES = 1024;
 

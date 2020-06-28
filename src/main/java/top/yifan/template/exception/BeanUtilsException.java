@@ -2,6 +2,8 @@ package top.yifan.template.exception;
 
 /**
  * BeanUtilsException
+ *
+ * @author star
  */
 public class BeanUtilsException extends RuntimeException {
 

@@ -22,7 +22,9 @@ import static springfox.documentation.schema.ResolvedTypes.modelRefFactory;
 import static springfox.documentation.spi.schema.contexts.ModelContext.inputParam;
 
 /**
- * The Springfox Plugin to resolve {@link Pageable} parameter into plain fields.
+ * Springfox 插件可将{@link Pageable}参数解析为简单字段
+ *
+ * @author star
  */
 public class PageableParameterBuilderPlugin implements OperationBuilderPlugin {
 

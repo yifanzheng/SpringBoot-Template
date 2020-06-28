@@ -1,6 +1,5 @@
 package top.yifan.template.exception;
 
-import top.yifan.template.web.rest.util.HeaderUtil;
 import org.springframework.dao.ConcurrencyFailureException;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
@@ -26,11 +25,16 @@ import java.util.NoSuchElementException;
 import java.util.stream.Collectors;
 
 /**
- * Controller advice to translate the server side exceptions to client-friendly json structures.
- * The error response follows RFC7807 - Problem Details for HTTP APIs (https://tools.ietf.org/html/rfc7807)
+ * ExceptionTranslator 全局异常转换器
+ *
+ * <p>
+ * 将服务器端异常转换为客户端友好的JSON结构。
+ *
+ * @author star
  */
 @ControllerAdvice
 public class ExceptionTranslator implements ProblemHandling {
+
     @Override
     public ResponseEntity<Problem> process(@Nullable ResponseEntity<Problem> entity, NativeWebRequest request) {
         if (entity == null || entity.getBody() == null) {
@@ -86,11 +90,6 @@ public class ExceptionTranslator implements ProblemHandling {
                 .with("message", ErrorConstants.DEFAULT_TYPE)
                 .build();
         return create(ex, problem, request);
-    }
-
-    @ExceptionHandler(BadRequestAlertException.class)
-    public ResponseEntity<Problem> handleBadRequestAlertException(BadRequestAlertException ex, NativeWebRequest request) {
-        return create(ex, request, HeaderUtil.createFailureAlert(ex.getEntityName(), ex.getErrorKey(), ex.getMessage()));
     }
 
     @ExceptionHandler(ConcurrencyFailureException.class)

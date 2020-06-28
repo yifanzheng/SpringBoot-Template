@@ -6,11 +6,9 @@ import org.springframework.http.HttpHeaders;
 import org.springframework.web.util.UriComponentsBuilder;
 
 /**
- * Utility class for handling pagination.
+ * 用于处理分页的工具类
  *
- * <p>
- * Pagination uses the same principles as the <a href="https://developer.github.com/v3/#pagination">GitHub API</a>,
- * and follow <a href="http://tools.ietf.org/html/rfc5988">RFC 5988 (Link header)</a>.
+ * @author star
  */
 public final class PaginationUtil {
 

@@ -2,6 +2,11 @@ package top.yifan.template.exception;
 
 import java.net.URI;
 
+/**
+ * ErrorConstants
+ *
+ * @author star
+ */
 public final class ErrorConstants {
 
     public static final String ERR_CONCURRENCY_FAILURE = "error.concurrencyFailure";

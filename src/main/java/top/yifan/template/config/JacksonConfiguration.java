@@ -9,6 +9,8 @@ import org.zalando.problem.ProblemModule;
 
 /**
  * JacksonConfiguration
+ *
+ * @author star
  */
 @Configuration
 public class JacksonConfiguration {

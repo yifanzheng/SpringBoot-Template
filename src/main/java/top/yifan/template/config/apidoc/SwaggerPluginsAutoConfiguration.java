@@ -14,7 +14,9 @@ import springfox.documentation.schema.TypeNameExtractor;
 import springfox.documentation.spring.web.plugins.Docket;
 
 /**
- * Register Springfox plugins.
+ * 注册 Springfox plugins
+ *
+ * @author star
  */
 @Configuration
 @ConditionalOnWebApplication

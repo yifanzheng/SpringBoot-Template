@@ -3,7 +3,7 @@ package top.yifan.template.exception;
 /**
  * ServiceException
  *
- * @author Star.Y.Zheng
+ * @author star
  */
 public class ServiceException extends RuntimeException {
 

@@ -14,12 +14,17 @@ import org.springframework.scheduling.annotation.EnableAsync;
 import org.springframework.scheduling.annotation.EnableScheduling;
 import org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor;
 
+/**
+ * AsyncConfiguration
+ *
+ * @author star
+ */
 @Configuration
 @EnableAsync
 @EnableScheduling
 public class AsyncConfiguration implements AsyncConfigurer {
 	
-	private final Logger log = LoggerFactory.getLogger(AsyncConfiguration.class);
+	private static final Logger LOGGER = LoggerFactory.getLogger(AsyncConfiguration.class);
 	
 	@Value("${async.core-pool-size}")
 	private int corePoolSize = 2;
@@ -33,7 +38,7 @@ public class AsyncConfiguration implements AsyncConfigurer {
 	@Override
     @Bean(name = "taskExecutor")
     public Executor getAsyncExecutor() {
-        log.debug("Creating Async Task Executor");
+        LOGGER.debug("Creating Async Task Executor");
         ThreadPoolTaskExecutor executor = new ThreadPoolTaskExecutor();
         executor.setCorePoolSize(corePoolSize);
         executor.setMaxPoolSize(maxPoolSize);

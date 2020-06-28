@@ -15,6 +15,8 @@ import java.util.Collections;
 
 /**
  * WebCorsConfiguration
+ *
+ * @author star
  **/
 @Configuration
 public class WebMvcConfiguration implements WebMvcConfigurer {
