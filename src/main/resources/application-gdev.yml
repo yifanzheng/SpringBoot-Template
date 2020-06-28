@@ -1,18 +1,2 @@
 env: gdev
 
-# 数据源配置
-spring:
-  datasource:
-    driver-class-name: com.mysql.jdbc.Driver
-    url: jdbc:mysql://localhost:3306/db_choice?useUnicode=true&characterEncoding=UTF-8
-    username: root
-    password: root
-    # 配置数据源，使用阿里巴巴的druid数据库连接池
-    druid:
-      initial-size: 1
-      min-idle: 1
-      max-active: 20
-      test-on-borrow: true
-      stat-view-servlet:
-       allow: true
-

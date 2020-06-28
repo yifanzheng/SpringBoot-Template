@@ -9,6 +9,14 @@ spring:
     profiles:
         active:
          - gdev # 激活gdev
+    # 配置数据源，使用阿里巴巴的druid数据库连接池
+    druid:
+        initial-size: 1
+        min-idle: 1
+        max-active: 20
+        test-on-borrow: true
+        stat-view-servlet:
+            allow: true
 
 async:
     core-pool-size: 2
