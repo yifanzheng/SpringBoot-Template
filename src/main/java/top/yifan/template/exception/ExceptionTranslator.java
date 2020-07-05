@@ -83,15 +83,6 @@ public class ExceptionTranslator implements ProblemHandling {
         return create(ex, problem, request);
     }
 
-    @ExceptionHandler(NoSuchElementException.class)
-    public ResponseEntity<Problem> handleNoSuchElementException(NoSuchElementException ex, NativeWebRequest request) {
-        Problem problem = Problem.builder()
-                .withStatus(Status.NOT_FOUND)
-                .with("message", ErrorConstants.DEFAULT_TYPE)
-                .build();
-        return create(ex, problem, request);
-    }
-
     @ExceptionHandler(ConcurrencyFailureException.class)
     public ResponseEntity<Problem> handleConcurrencyFailure(ConcurrencyFailureException ex, NativeWebRequest request) {
         Problem problem = Problem.builder()
