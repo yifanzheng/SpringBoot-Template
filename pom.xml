@@ -18,7 +18,7 @@
         <guava.version>29.0-jre</guava.version>
         <jasypt.version>2.1.0</jasypt.version>
         <druid.version>1.1.0</druid.version>
-        <commons-io.version>2.4</commons-io.version>
+        <commons-io.version>2.7</commons-io.version>
         <druid-spring-boot.version>1.1.9</druid-spring-boot.version>
     </properties>
 
