@@ -4,8 +4,6 @@ import org.apache.commons.lang3.StringUtils;
 
 /**
  * StringHelper
- *
- * @author sz7v
  */
 public class StringHelper {
 

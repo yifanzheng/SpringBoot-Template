@@ -2,12 +2,12 @@ env: default
 
 spring:
   application:
-    name: amt
+    name: Demo
   profiles:
     active: gdev
   boot:
     admin.client:
-      url: http://localhost:8403
+      url: http://localhost:8400
       username: admin
       password: admin
   jackson.serialization:

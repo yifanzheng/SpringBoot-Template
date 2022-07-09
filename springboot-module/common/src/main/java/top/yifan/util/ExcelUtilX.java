@@ -6,7 +6,6 @@ import cn.hutool.poi.excel.ExcelWriter;
 import org.apache.commons.io.IOUtils;
 import org.apache.poi.openxml4j.util.ZipSecureFile;
 import org.springframework.core.io.ClassPathResource;
-import sun.security.util.Resources;
 
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
@@ -17,8 +16,6 @@ import java.util.Optional;
 
 /**
  * ExcelUtilX
- *
- * @author sz7v
  */
 public class ExcelUtilX {
 

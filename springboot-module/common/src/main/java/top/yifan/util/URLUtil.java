@@ -6,8 +6,6 @@ import javax.validation.constraints.NotNull;
 
 /**
  * URLUtil
- *
- * @author sz7v
  */
 public class URLUtil {
 

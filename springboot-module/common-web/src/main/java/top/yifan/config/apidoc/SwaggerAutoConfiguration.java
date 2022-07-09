@@ -28,7 +28,7 @@ import java.util.Map.Entry;
 @ConditionalOnProperty(name = "swagger.enable", havingValue = "true")
 public class SwaggerAutoConfiguration {
     
-    @Value("${swagger.scanPackage: com.newegg.ps.amt.common.web.rest}")
+    @Value("${swagger.scanPackage: top.yifancommon.web.rest}")
     private String scanPackage;
     
     @Autowired

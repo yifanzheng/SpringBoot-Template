@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style type="text/css">
+* {
+  margin: 0;
+  box-sizing: border-box;
+  font-size: 14px;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-size-adjust: none;
+  height: 100%;
+  line-height: 1.6em;
+  background-color: #ecf0f5;
+}
+
+table td {
+  vertical-align: top;
+}
+
+.body-wrap {
+  background-color: #ecf0f5;
+}
+
+.content {
+  max-width: 100%;
+  padding: 20px;
+}
+
+.main {
+  background-color: #fff;
+  border-bottom: 2px solid #d7d7d7;
+}
+
+.footer {
+  width: 100%;
+  clear: both;
+  color: #999;
+  padding: 20px;
+}
+
+.footer p, .footer a, .footer td {
+  color: #999;
+  font-size: 12px;
+}
+
+h1, h2, h3 {
+  color: #1a2c3f;
+  line-height: 1.2em;
+  font-weight: 400;
+}
+
+h1 {
+  font-size: 32px;
+  font-weight: 500;
+}
+
+h2 {
+  font-size: 24px;
+}
+
+h3 {
+  font-size: 18px;
+}
+
+h4 {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+p, ul, ol {
+  margin-bottom: 10px;
+  font-weight: normal;
+}
+
+p li, ul li, ol li {
+  margin-left: 5px;
+  list-style-position: inside;
+}
+
+a {
+  color: #348eda;
+  text-decoration: underline;
+}
+
+.last {
+  margin-bottom: 0;
+}
+
+.first {
+  margin-top: 0;
+}
+
+.aligncenter {
+  text-align: center;
+}
+
+.alignright {
+  text-align: right;
+}
+
+.alignleft {
+  text-align: left;
+}
+
+.clear {
+  clear: both;
+}
+
+.alert {
+  font-size: 16px;
+  color: #fff;
+  font-weight: 500;
+  padding: 20px;
+}
+
+.alert a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 16px;
+}
+
+.alert.alert-warning {
+  background-color: #FFA726;
+}
+
+.alert.alert-bad {
+  background-color: #ef5350;
+}
+
+.alert.alert-good {
+  background-color: #8BC34A;
+}
+
+.invoice {
+  margin: 25px auto;
+  text-align: left;
+  width: 100%;
+}
+
+.invoice td {
+  padding: 5px 4px;
+}
+
+.invoice .invoice-items {
+  width: 100%;
+}
+
+.invoice .invoice-items td {
+  border-top: #eee 1px solid;
+}
+
+.invoice .invoice-items .total td {
+  border-top: 2px solid #6c7b88;
+  font-size: 18px;
+}
+
+.td-name {
+    width: 120px;
+    min-width: 120px;
+    white-space: nowrap;
+    padding-left: 0;
+    padding-right: 4px;
+    color: #6c7b88;
+}
+
+    </style>
+</head>
+<body>
+<div class="content" align="center">
+    <table class="body-wrap" width="800">
+        <tr>
+            <td></td>
+            <td>
+                <table class="main">
+                    <tr>
+                        <td class="alert alert-good" style="background-color: #8BC34A;" width="800">
+                            <strong style="font-size: 24px">Demo Notification: ${appName} ${appStatus}</strong>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <table cellpadding="0" cellspacing="0">
+                                <tr>
+                                    <td class="aligncenter" width="800">
+                                        <table class="invoice">
+                                            <tr>
+                                                <td>
+                                                    <table class="invoice-items" cellpadding="0" cellspacing="0">
+                                                        <tr>
+                                                            <td width="120px">
+                                                                <div class="td-name">AppName</div>
+                                                            </td>
+                                                            <td>${appName}</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td width="120px">
+                                                                <div class="td-name">AppStatus</div>
+                                                            </td>
+                                                            <td>${appStatus}</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td width="120px">
+                                                                <div class="td-name">EventTime</div>
+                                                            </td>
+                                                            <td>${eventTime}</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td width="120px">
+                                                                <div class="td-name">Endpoint</div>
+                                                            </td>
+                                                            <td>
+                                                                <a href="${endpoint}">
+                                                                    <span>${endpoint}</span>
+                                                                </a>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td width="120px">
+                                                                <div class="td-name">WebUI</div>
+                                                            </td>
+                                                            <td>
+                                                                <a href="${clientUrl}">
+                                                                    <span>${clientUrl}</span>
+                                                                </a>
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+
+                            </table>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+</div>
+</body>
+</html>
+
