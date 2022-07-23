@@ -7,6 +7,8 @@ spring:
     active: gdev
   boot:
     admin.client:
+      instance:
+        prefer-ip: true
       url: http://localhost:8400
       username: admin
       password: admin
