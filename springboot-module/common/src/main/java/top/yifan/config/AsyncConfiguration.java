@@ -27,7 +27,7 @@ public class AsyncConfiguration implements AsyncConfigurer {
     @Value("${async.max-pool-size:50}")
     private int maxPoolSize;
 
-    @Value("${async.queue-capacity:10000}")
+    @Value("${async.queue-capacity:1000}")
     private int queueCapacity;
 
     @Override

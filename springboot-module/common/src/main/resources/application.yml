@@ -15,3 +15,9 @@ spring:
   jackson.serialization:
     write-dates-as-timestamps: true
     write_date_timestamps_as_nanoseconds: false
+
+
+async:
+  core-pool-size: 10
+  max-pool-size: 50
+  queue-capacity: 1000

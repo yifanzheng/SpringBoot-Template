@@ -31,7 +31,6 @@ public class PortalApplication {
 
     private static final Logger log = LoggerFactory.getLogger(PortalApplication.class);
 
-
     public static void main(String[] args) {
         SpringApplication app = new SpringApplication(PortalApplication.class);
         Environment env = app.run(args).getEnvironment();
@@ -61,17 +60,9 @@ public class PortalApplication {
                 env.getActiveProfiles());
     }
 
-    @Bean
-    public RestTemplate restTemplate(RestTemplateBuilder builder) {
-        RestTemplate rest = builder.build();
-        rest.setRequestFactory(new HttpComponentsClientHttpRequestFactory());
-        return rest;
-    }
-
     @PostConstruct
     void started() {
         // 将应用程序置身于US时区之中，以统一不同时区的时间
-        // 由于数据进入数据库时，使用的是数据库系统时间，而数据库处于 US 时区
         TimeZone.setDefault(TimeZone.getTimeZone("America/Los_Angeles"));
         log.info("Change time zone to US, current time: {}", Instant.now());
     }
