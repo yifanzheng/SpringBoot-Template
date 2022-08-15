@@ -30,8 +30,9 @@ public class ScheduleConfiguration implements SchedulingConfigurer {
     @Override
     public void configureTasks(ScheduledTaskRegistrar registrar) {
         log.debug("Create Scheduled Executor");
+        final int schedleIndex = scheduledNum.getAndIncrement();
         ScheduledThreadPoolExecutor pool = new ScheduledThreadPoolExecutor(DEFAULT_CORE_SIZE,
-                r -> new Thread(r, "Scheduled-Task[" + scheduledNum.getAndIncrement() + "]-Task[" + taskNum.getAndIncrement() + "]"));
+                r -> new Thread(r, "Scheduled-Task[" + schedleIndex + "]-Task[" + taskNum.getAndIncrement() + "]"));
         registrar.setScheduler(pool);
     }
 }
