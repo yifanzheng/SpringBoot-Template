@@ -14,7 +14,7 @@
     <properties>
         <maven.compiler.source>8</maven.compiler.source>
         <maven.compiler.target>8</maven.compiler.target>
-        <boot.admin.version>2.0.2</boot.admin.version>
+        <boot.admin.version>2.7.4</boot.admin.version>
     </properties>
 
 

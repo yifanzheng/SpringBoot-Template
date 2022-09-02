@@ -22,17 +22,17 @@ import static springfox.documentation.schema.ResolvedTypes.modelRefFactory;
 import static springfox.documentation.spi.schema.contexts.ModelContext.inputParam;
 
 /**
- * The Springfox Plugin to resolve {@link Pageable} parameter into plain fields.
+ * Springfox 插件可将{@link Pageable}参数解析为简单字段
+ *
+ * @author star
  */
 public class PageableParameterBuilderPlugin implements OperationBuilderPlugin {
 
     public static final String DEFAULT_PAGE_NAME = "page";
-    public static final String DEFAULT_PAGE_VALUE = "0";
     public static final String PAGE_TYPE = "query";
     public static final String PAGE_DESCRIPTION = "Page number of the requested page";
 
     public static final String DEFAULT_SIZE_NAME = "size";
-    public static final String DEFAULT_SIZE_VALUE = "20";
     public static final String SIZE_TYPE = "query";
     public static final String SIZE_DESCRIPTION = "Size of a page";
 
@@ -121,7 +121,6 @@ public class PageableParameterBuilderPlugin implements OperationBuilderPlugin {
         return new ParameterBuilder()
             .name(getPageName())
             .parameterType(PAGE_TYPE)
-            .defaultValue(DEFAULT_PAGE_VALUE)
             .modelRef(intModel)
             .description(PAGE_DESCRIPTION)
             .build();
@@ -139,7 +138,6 @@ public class PageableParameterBuilderPlugin implements OperationBuilderPlugin {
         return new ParameterBuilder()
             .name(getSizeName())
             .parameterType(SIZE_TYPE)
-            .defaultValue(DEFAULT_SIZE_VALUE)
             .modelRef(intModel)
             .description(SIZE_DESCRIPTION)
             .build();

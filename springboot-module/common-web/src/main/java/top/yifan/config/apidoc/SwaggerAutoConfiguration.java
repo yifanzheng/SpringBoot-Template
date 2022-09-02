@@ -41,7 +41,7 @@ public class SwaggerAutoConfiguration {
             apis = Predicates.or(RequestHandlerSelectors.basePackage(scanPackage),
                     RequestHandlerSelectors.basePackage("org.springframework.boot.actuate.endpoint.web.servlet"));
         } else {
-            apis = RequestHandlerSelectors.basePackage(scanPackage);
+            RequestHandlerSelectors.basePackage(scanPackage);
         }
         
         return new Docket(DocumentationType.SWAGGER_2)

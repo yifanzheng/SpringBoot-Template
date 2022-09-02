@@ -8,7 +8,6 @@ import org.springframework.boot.context.TypeExcludeFilter;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.ComponentScan.Filter;
 import org.springframework.context.annotation.FilterType;
-import springfox.documentation.swagger2.annotations.EnableSwagger2;
 
 @EnableAutoConfiguration(
         exclude = { DataSourceAutoConfiguration.class, HibernateJpaAutoConfiguration.class })
